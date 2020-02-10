@@ -33,7 +33,8 @@ projectID = "1670"
 
 #################### Uncomment this to UPDATE information about a project using PUT.
 
-params = {project: {description: "Complete this assignment which covers the topics on Selection and Conditionals in python.", difficulty: "100", has_git: "true", has_mark: "true", is_subscriptable: "true", name: "APCSP - 01", visible: "true", parent_id: "1710"}}
+## For a list of project settings you can change via the API, go to https://api.intra.42.fr/apidoc/2.0/projects/update.html
+params = {project: {parent_id: "1710"}}
 
 response = token.put("/v2/projects/" + projectID, params: params)
 
@@ -43,6 +44,6 @@ end
 
 ### Get the new Project Information.
 response = token.get("/v2/projects/" + projectID)
-puts "New Project Settings: ".blue
+puts "New Project Settings: ".cyan
 puts response.parsed
 # => [{"id"=>6, "coordinates"=>[73.0, 53.0], "by"=>[], "kind"=>"project", "project_session_id"=>3}, {"id"=>4, "coordinates"=>[63.0, 81.0], "by"=>[], "kind"=>"exam", "project_session_id"=>2}, {"id"=>5, "coordinates"=>[80.0, 76.0], "by"=>[], "kind"=>"exam", "project_session_id"=>2}]
