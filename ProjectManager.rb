@@ -21,7 +21,11 @@ client = OAuth2::Client.new(UID, SECRET, site: "https://api.intra.42.fr")
 token = client.client_credentials.get_token
 
 ####################  Set this to the projectID of the project you wish to work with. As an admin you can see this number from the project's page.
+# ID of project you want to edit.
 projectID = "1670"
+
+# Parameters you'd like to set
+parentID = "1710"
 
 #################### Uncomment this to GET information about a project.
 
@@ -34,7 +38,7 @@ projectID = "1670"
 #################### Uncomment this to UPDATE information about a project using PUT.
 
 ## For a list of project settings you can change via the API, go to https://api.intra.42.fr/apidoc/2.0/projects/update.html
-params = {project: {parent_id: "1710"}}
+params = {project: {parent_id: parentID}}
 
 response = token.put("/v2/projects/" + projectID, params: params)
 
