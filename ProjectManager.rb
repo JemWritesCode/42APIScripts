@@ -18,7 +18,7 @@ require "oauth2"
 UID = "PutYoursHere"
 SECRET = "PutYoursHere"
 client = OAuth2::Client.new(UID, SECRET, site: "https://api.intra.42.fr")
-token = client.client_credentials.get_token
+token = client.client_credentials.get_token(scope: "public forum projects profile elearning tig")
 
 ####################  Set this to the projectID of the project you wish to work with. As an admin you can see this number from the project's page.
 # ID of project you want to edit.
