@@ -9,3 +9,4 @@ Scripts for updating things on the 42 Intra Platform.
 ```
 gem install oauth2 -v 1.2.0
 ```
+3. Set the UID and SECRET from the [42Intra API Settings](https://profile.intra.42.fr/oauth/applications) page. 
