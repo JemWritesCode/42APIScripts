@@ -1,5 +1,5 @@
 # 42Intra API Scripts
-Scripts for updating things on the [42 School] Intra(https://www.42.us.org/) Platform.
+Scripts for updating things on the [42 School](https://www.42.us.org/)  Intra Platform.
 
 ### Usage
 
